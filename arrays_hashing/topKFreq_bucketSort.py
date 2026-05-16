@@ -27,3 +27,13 @@ class Solution:
                 # Once we have found k elements, we are done
                 if len(res) == k:
                     return res
+                
+'''
+        If everyone in freq[i] belongs in the result, why not just grab the whole list at once?
+--> The reason we use a second loop to append items one by one is because of the value of k
+freq[2] = [1, 2, 3] (All three numbers appeared twice).
+If you did res.extend(freq[2]) or res += freq[2], your result would be [1, 2, 3]
+Problem: You now have 3 elements, but the user only asked for k=2.
+                
+'''
+                

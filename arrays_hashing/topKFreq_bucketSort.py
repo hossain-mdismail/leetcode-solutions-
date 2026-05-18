@@ -9,7 +9,7 @@ class Solution:
         # 2. Create the "Buckets" (List of Lists)
         # The index will represent the frequency. 
         # Size is len(nums) + 1 to account for index 0 and max frequency.
-        freq = [[] for i in range(len(nums) + 1)]
+        freq = [[] for i in range(len(nums) + 1)] # THIS IS THE BUCKET!!!!!!  
 
         # 3. Fill the buckets
         # Map the number to the index that represents its frequency
@@ -37,6 +37,8 @@ Problem: You now have 3 elements, but the user only asked for k=2.
   
   
   Efficiency:
-                If k is 10, but the highest frequency bucket freq[100] has 500 numbers in it, appending the "whole list" would waste time and memory by grabbing 490 numbers you don't need. The for loop ensures we only take what we need and immediately exit the entire function.
+                If k is 10, but the highest frequency bucket freq[100] has 500 numbers in it, appending
+                the "whole list" would waste time and memory by grabbing 490 numbers you don't need. 
+                The for loop ensures we only take what we need and immediately exit the entire function.
 '''
                 

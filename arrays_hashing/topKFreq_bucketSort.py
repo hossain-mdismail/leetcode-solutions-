@@ -21,7 +21,7 @@ class Solution:
         # Move backwards through the buckets (highest frequency first)
         # Time: O(n)
         res = []
-        for i in range(len(freq) - 1, 0, -1):
+        for i in range(len(freq) - 1, 0, -1):   # it will start considering from last of the array
             for num in freq[i]:
                 res.append(num)
                 # Once we have found k elements, we are done
